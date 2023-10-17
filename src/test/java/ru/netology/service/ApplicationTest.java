@@ -11,7 +11,7 @@ public class ApplicationTest {
     @Test
     void shouldTest() {
 
-        open("http://localhost:7777");
+        open("http://localhost:9999");
         SelenideElement form = $(".form");
         form.$("[data-test-id=name] input").setValue("Иванов Василий");
         form.$("[data-test-id=phone] input").setValue("+72930000000");
