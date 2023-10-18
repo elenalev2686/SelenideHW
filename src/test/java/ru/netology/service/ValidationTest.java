@@ -31,6 +31,17 @@ public class ValidationTest {
         form.$("[data-test-id=name].input_invalid .input__sub").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
     }
     @Test
+    void shouldNotTestNameSimbol() {
+
+        open("http://localhost:7777");
+        SelenideElement form = $(".form");
+        form.$("[data-test-id=name] input").setValue("Иванов Василий$");
+        form.$("[data-test-id=phone] input").setValue("+72930000000");
+        form.$("[data-test-id=agreement] ").click();
+        form.$(".button").click();
+        form.$("[data-test-id=name].input_invalid .input__sub").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
+    }
+    @Test
     void shouldNotTestPhone() {
 
         open("http://localhost:7777");
