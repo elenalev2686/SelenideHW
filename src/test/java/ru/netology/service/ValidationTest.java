@@ -11,7 +11,7 @@ public class ValidationTest {
     @Test
     void shouldNotTestNameEmpty() {
 
-        open("http://localhost:7777");
+        open("http://localhost:9999");
         SelenideElement form = $(".form");
         form.$("[data-test-id=name] input").setValue("");
         form.$("[data-test-id=phone] input").setValue("+72930000000");
