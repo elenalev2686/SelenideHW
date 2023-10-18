@@ -22,7 +22,7 @@ public class ValidationTest {
     @Test
     void shouldNotTestNameLatin() {
 
-        open("http://localhost:7777");
+        open("http://localhost:9999");
         SelenideElement form = $(".form");
         form.$("[data-test-id=name] input").setValue("Ivanov Vasiliy");
         form.$("[data-test-id=phone] input").setValue("+72930000000");
@@ -33,7 +33,7 @@ public class ValidationTest {
     @Test
     void shouldNotTestNameSimbol() {
 
-        open("http://localhost:7777");
+        open("http://localhost:9999");
         SelenideElement form = $(".form");
         form.$("[data-test-id=name] input").setValue("Иванов Василий$");
         form.$("[data-test-id=phone] input").setValue("+72930000000");
@@ -44,7 +44,7 @@ public class ValidationTest {
     @Test
     void shouldNotTestPhone() {
 
-        open("http://localhost:7777");
+        open("http://localhost:9999");
         SelenideElement form = $(".form");
         form.$("[data-test-id=name] input").setValue("Иванов Василий");
         form.$("[data-test-id=phone] input").setValue("");
@@ -55,7 +55,7 @@ public class ValidationTest {
     @Test
     void shouldNotTestPhoneWrong() {
 
-        open("http://localhost:7777");
+        open("http://localhost:9999");
         SelenideElement form = $(".form");
         form.$("[data-test-id=name] input").setValue("Иванов Василий");
         form.$("[data-test-id=phone] input").setValue("899999999");
@@ -66,7 +66,7 @@ public class ValidationTest {
     @Test
     void shouldNotTestCheckbox() {
 
-        open("http://localhost:7777");
+        open("http://localhost:9999");
         SelenideElement form = $(".form");
         form.$("[data-test-id=name] input").setValue("Иванов Василий");
         form.$("[data-test-id=phone] input").setValue("+79230000000");
